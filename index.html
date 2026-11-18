@@ -5,7 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#1d4ed8">
 <title>CHẤM NHANH · Phiếu CV 1239</title>
-<!-- Triway giáo viên · Thầy Bùi Duy Phương. App một file, chạy không cần mạng; ảnh phiếu chỉ xử lý trên máy này, không gửi đi đâu. -->
+<!-- === Cài được ra màn hình điện thoại (PWA) === -->
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="application-name" content="Chấm nhanh">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Chấm nhanh">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="description" content="Chấm nhanh phiếu trả lời trắc nghiệm mẫu CV 1239 và TNMaker, chạy ngay trên máy, không gửi ảnh đi đâu.">
+<!-- CHẤM NHANH · Tác giả: cô Bùi Thị Thuý Vân – Trường PTDTNT THCS & THPT Bắc Hà, làm cùng trợ lý AI. App một file, chạy không cần mạng; ảnh phiếu chỉ xử lý trên máy này, không gửi đi đâu. Mẫu phiếu hỗ trợ: CV 1239 (Bộ GD&ĐT) và TNMaker. -->
 <style>
 :root{
   --nen1:#eef4ff; --nen2:#fdf2ff; --kinh:rgba(255,255,255,.78); --vien:rgba(30,58,138,.12);
@@ -1696,6 +1706,14 @@ function theoHash() {
 khoiDong();
 })();
 
+</script>
+<script>
+/* Đăng ký service worker: giúp app mở được cả khi không có mạng */
+if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function (e) { console.warn("SW:", e); });
+  });
+}
 </script>
 </body>
 </html>
