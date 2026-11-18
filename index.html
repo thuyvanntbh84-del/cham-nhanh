@@ -175,7 +175,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--chinh);margin:8px 0}
   <div class="ten">CHẤM NHANH<small>Quét phiếu tô CV 1239 · tự chấm · tự lưu điểm</small></div>
   <div class="bai-dang" id="baiDang"></div>
 </header>
-<div class="nhap"><span>✅ BẢN NHÁP — thầy/cô duyệt trước khi dùng · ảnh phiếu chỉ xử lý trên máy này · bản 17/11 (lần 4)</span></div>
+<div class="nhap"><span>✅ BẢN NHÁP — thầy/cô duyệt trước khi dùng · ảnh phiếu chỉ xử lý trên máy này · bản 18/11/2026</span></div>
 
 <main>
 <div class="the" id="chuaChay" style="border:2px solid var(--ngo)">
@@ -228,9 +228,10 @@ details summary{cursor:pointer;font-weight:700;color:var(--chinh);margin:8px 0}
       <button class="nut phu nho" data-mau-diem="tin">💻 Tin, Sử, Địa, KT&amp;PL, Công nghệ · 24 + 4 câu</button>
       <button class="nut phu nho" data-mau-diem="khtn">🧪 Lí, Hoá, Sinh · 18 + 4 + 6</button>
       <button class="nut phu nho" data-mau-diem="toan">📐 Toán · 12 + 4 + 6 (III: 0,5đ)</button>
+      <button class="nut phu nho" data-mau-diem="nn">🌐 Ngoại ngữ · 40 câu</button>
       <button class="nut phu nho" data-mau-diem="y025">🔢 Đúng–Sai: mỗi ý 0,25</button>
     </div>
-    <p class="goiy">Nút mẫu theo cấu trúc đề thi tốt nghiệp THPT từ 2025: Phần I mỗi câu 0,25 · Phần II một câu 1 ý đúng 0,1 – 2 ý 0,25 – 3 ý 0,5 – 4 ý 1 điểm. Đề của tổ khác cấu trúc → chị sửa số câu, điểm bên dưới. <b>Chị soát lại thang điểm trước khi chấm thật.</b></p>
+    <p class="goiy">Nút mẫu theo cấu trúc đề thi tốt nghiệp THPT từ 2025: Phần I mỗi câu 0,25 · Phần II một câu 1 ý đúng 0,1 – 2 ý 0,25 – 3 ý 0,5 – 4 ý 1 điểm. Đề của tổ khác cấu trúc → thầy cô sửa số câu, điểm bên dưới. <b>Thầy cô soát lại thang điểm trước khi chấm thật.</b></p>
     <div class="luoi hai" style="margin-top:8px">
       <div>
         <div class="the phan p1"><h2><span class="huy">I</span>Phần I · Nhiều lựa chọn</h2>
@@ -272,7 +273,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--chinh);margin:8px 0}
       <input type="text" id="maMoi" placeholder="Mã đề, VD 101" style="max-width:170px">
       <button class="nut phu" id="nutThemMa">➕ Thêm mã đề</button>
     </div>
-    <p class="goiy">Nhanh nhất: chị tô đáp án vào 1 phiếu (tô cả mã đề) rồi bấm <b>Quét phiếu đáp án</b>. Gõ tay: Phần I gõ liền <i>ABCDA…</i>; Phần II mỗi câu 4 chữ <i>ĐSĐS</i> (gõ D/S hay 1/0 cũng được).</p>
+    <p class="goiy">Nhanh nhất: thầy cô tô đáp án vào 1 phiếu (tô cả mã đề) rồi bấm <b>Quét phiếu đáp án</b>. Gõ tay: Phần I gõ liền <i>ABCDA…</i>; Phần II mỗi câu 4 chữ <i>ĐSĐS</i> (gõ D/S hay 1/0 cũng được).</p>
     <div id="dsMa"></div>
   </div>
 </section>
@@ -298,7 +299,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--chinh);margin:8px 0}
       </div>
       <div class="buoc" style="margin-top:10px">
         <div><b>💡 Chụp rõ</b>Phiếu nằm phẳng, đủ sáng, không bóng tay. Thấy đủ 4 ô vuông góc. Chụp dọc hay ngang, xuôi hay ngược đều được.</div>
-        <div><b>🟠 Ô màu cam</b>Máy chưa chắc (tô mờ, tô 2 ô, tẩy chưa sạch). Chị nhìn phiếu giấy rồi chạm để sửa.</div>
+        <div><b>🟠 Ô màu cam</b>Máy chưa chắc (tô mờ, tô 2 ô, tẩy chưa sạch). Thầy cô nhìn phiếu giấy rồi chạm để sửa.</div>
       </div>
     </div>
     <div class="the" id="ketQuaDoc">
@@ -372,6 +373,7 @@ details summary{cursor:pointer;font-weight:700;color:var(--chinh);margin:8px 0}
         <li>Máy chỉ đọc ô tô; <b>điểm cuối cùng do thầy/cô duyệt</b>. Ô màu cam luôn phải xem lại phiếu giấy.</li>
         <li>Không công bố điểm từng em trong nhóm chung.</li>
       </ul>
+      <p class="goiy" style="margin-top:10px">ℹ️ <b>CHẤM NHANH</b> · phiếu trả lời trắc nghiệm theo mẫu CV 1239 (mẫu đen trắng của Bộ GD&amp;ĐT và mẫu in màu) · dùng cho mọi môn có phần trắc nghiệm. Tác giả: cô Bùi Thị Thuý Vân, Trường PTDTNT THCS &amp; THPT Bắc Hà, làm cùng trợ lý AI. Miễn phí, chạy ngay trên máy, không cần tài khoản.</p>
       <h3>🧠 Máy đọc phiếu thế nào?</h3>
       <svg viewBox="0 0 420 120" width="100%" aria-hidden="true">
         <g font-size="12" font-weight="700" text-anchor="middle" fill="#13213d">
@@ -996,6 +998,7 @@ var MAU_DIEM = {
   tin: { n1: 24, d1: 0.25, n2: 4, k2: "bo", t2: [0.1, 0.25, 0.5, 1], n3: 0, d3: 0.25 },
   khtn: { n1: 18, d1: 0.25, n2: 4, k2: "bo", t2: [0.1, 0.25, 0.5, 1], n3: 6, d3: 0.25 },
   toan: { n1: 12, d1: 0.25, n2: 4, k2: "bo", t2: [0.1, 0.25, 0.5, 1], n3: 6, d3: 0.5 },
+  nn: { n1: 40, d1: 0.25, n2: 0, k2: "bo", t2: [0.1, 0.25, 0.5, 1], n3: 0, d3: 0.25 },
   y025: { k2: "y", y2: 0.25 }
 };
 function veDapAn() {
@@ -1021,7 +1024,7 @@ function veCoCau() {
   phan.forEach(function (p) { var w = p[1] / tong * 400; if (w > 0) { h += '<rect x="' + x + '" y="6" width="' + w + '" height="26" fill="' + p[2] + '"/>'; if (w > 40) h += '<text x="' + (x + w / 2) + '" y="24" fill="#fff" font-size="12" font-weight="800" text-anchor="middle">' + so(p[1]) + "</text>"; x += w; } });
   h += "</svg>";
   h += '<div class="hang">' + phan.map(function (p) { return '<span class="chip" style="background:' + p[2] + '22;color:' + p[2] + '">● ' + p[0] + ": " + so(p[1]) + "đ</span>"; }).join("") + "</div>";
-  if (Math.abs(t.tong - 10) > 1e-6) h += '<p class="goiy" style="color:#b45309">⚠️ Tổng tối đa đang là ' + so(t.tong) + " điểm (không phải 10). Nếu đề thang 10, chị chỉnh số câu hoặc điểm mỗi câu.</p>";
+  if (Math.abs(t.tong - 10) > 1e-6) h += '<p class="goiy" style="color:#b45309">⚠️ Tổng tối đa đang là ' + so(t.tong) + " điểm (không phải 10). Nếu đề thang 10, thầy cô chỉnh số câu hoặc điểm mỗi câu.</p>";
   $("coCau").innerHTML = h;
 }
 function docCfg() {
@@ -1084,7 +1087,7 @@ function veQuet() {
   $("tuLuu").checked = S.tuLuu;
   var coCam = !TRONG_KHUNG && !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) && window.isSecureContext !== false;
   $("nutCam").classList.toggle("an", !coCam);
-  $("ghiChuCam").textContent = coCam ? "" : (TRONG_KHUNG ? "Bản mở qua link: " : "Mở app từ tệp: ") + "chị bấm «Chụp một phiếu» — điện thoại mở camera, chụp xong máy tự đọc, tự lưu.";
+  $("ghiChuCam").textContent = coCam ? "" : (TRONG_KHUNG ? "Bản mở qua link: " : "Mở app từ tệp: ") + "thầy cô bấm «Chụp một phiếu» — điện thoại mở camera, chụp xong máy tự đọc, tự lưu.";
   veVuaQuet();
 }
 function veVuaQuet() {
@@ -1149,8 +1152,8 @@ function hienDoc() {
     $("tienDo").innerHTML = "<b>" + (phien.xemLai ? "🟠 Xem lại phiếu" : "📚 Chấm hàng loạt · phiếu") + " " + cho.so + "/" + phien.tong + "</b>" + (cho.ten ? " · " + esc(cho.ten) : "") +
       ' · đã lưu ' + phien.luu + (phien.bo ? " · bỏ qua " + phien.bo : "") + '<div class="thanh"><i style="width:' + Math.round((cho.so - 1) / phien.tong * 100) + '%"></i></div>';
   }
-  if (cho && (!r.sbd || /\?/.test(r.sbd))) chip.push('<span class="chip sai">SBD chưa rõ — chị gõ SBD rồi bấm Lưu</span>');
-  if (cho && phien.xemLai) chip.push('<span class="chip ngo">Phiếu đã lưu — không còn ảnh chụp, chị đối chiếu phiếu giấy. Bấm Lưu = đã xem xong</span>');
+  if (cho && (!r.sbd || /\?/.test(r.sbd))) chip.push('<span class="chip sai">SBD chưa rõ — thầy cô gõ SBD rồi bấm Lưu</span>');
+  if (cho && phien.xemLai) chip.push('<span class="chip ngo">Phiếu đã lưu — không còn ảnh chụp, thầy cô đối chiếu phiếu giấy. Bấm Lưu = đã xem xong</span>');
   else if (b.kq[r.sbd] && cheDo === "hs") chip.push('<span class="chip ngo">SBD ' + esc(r.sbd) + " đã có — lưu sẽ thay bài cũ</span>");
   $("dChip").innerHTML = chip.join("");
   veAnhDoc(); $("banDoDoc").innerHTML = banDoSVG(r.mau, toTheoBaiLam(r, cheDo === "hs" ? b : null), 420);
@@ -1224,7 +1227,7 @@ function veSua() {
 }
 function luuDangDoc(tuDong, loat) {
   var b = bai(), r = dangDoc.r;
-  if (!loat) { // lấy SBD, mã đề chị có thể đã gõ sửa (chấm hàng loạt thì ô nhập không hiện → giữ số máy đọc)
+  if (!loat) { // lấy SBD, mã đề thầy cô có thể đã gõ sửa (chấm hàng loạt thì ô nhập không hiện → giữ số máy đọc)
     if ($("dSbd").value.trim() !== r.sbd) r.sbdTho = null;
     if ($("dMade").value.trim() !== r.made) r.madeTho = null;
     r.sbd = $("dSbd").value.trim(); r.made = $("dMade").value.trim();
@@ -1236,12 +1239,12 @@ function luuDangDoc(tuDong, loat) {
     cheDo = "hs"; dongDoc(); moMan("dapan"); return;
   }
   ["sbd", "made"].forEach(function (x) { var t = r.ngo.indexOf(x); if (t >= 0 && r[x] && !/\?/.test(r[x])) r.ngo.splice(t, 1); });
-  if (!tuDong && !loat) r.ngo = []; // chị đã nhìn phiếu và bấm Lưu → coi như đã xem lại
-  if (!r.sbd || /\?/.test(r.sbd)) { bao("Số báo danh chưa rõ — chị gõ lại SBD rồi bấm Lưu", "do"); $("dSbd").focus(); am("sai"); return; }
+  if (!tuDong && !loat) r.ngo = []; // thầy cô đã nhìn phiếu và bấm Lưu → coi như đã xem lại
+  if (!r.sbd || /\?/.test(r.sbd)) { bao("Số báo danh chưa rõ — thầy cô gõ lại SBD rồi bấm Lưu", "do"); $("dSbd").focus(); am("sai"); return; }
   var luuR = { sbd: r.sbd, made: r.made, mau: r.mau, sbdTho: r.sbdTho || null, madeTho: r.madeTho || null, p3Tho: r.p3Tho || null, p1: r.p1, p2: r.p2, p3: r.p3, ngo: r.ngo.slice(), tl: r.tl, luc: Date.now() };
   if (dangDoc.cho) phien.luu++;
   var sbdCu = dangDoc.cho && dangDoc.cho.sbdCu;
-  if (sbdCu && sbdCu !== r.sbd && b.kq[sbdCu]) delete b.kq[sbdCu]; // chị sửa SBD của phiếu đã lưu → chuyển sang SBD mới
+  if (sbdCu && sbdCu !== r.sbd && b.kq[sbdCu]) delete b.kq[sbdCu]; // thầy cô sửa SBD của phiếu đã lưu → chuyển sang SBD mới
   var cu = !!b.kq[r.sbd];
   b.kq[r.sbd] = luuR; luu();
   var c = cham(b, luuR);
@@ -1312,7 +1315,7 @@ function batCam() {
       luong = s; var v = $("vid"); v.srcObject = s; v.play();
       $("vungCam").classList.remove("an"); $("nutCam").classList.add("an");
       henGio = setInterval(vongCam, 380);
-    }).catch(function (e) { bao("Không bật được camera: " + (e && e.name === "NotAllowedError" ? "chị chưa cho phép" : (e && e.message || e)) + ". Dùng nút Chụp một phiếu.", "do"); });
+    }).catch(function (e) { bao("Không bật được camera: " + (e && e.name === "NotAllowedError" ? "chưa được cho phép" : (e && e.message || e)) + ". Dùng nút Chụp một phiếu.", "do"); });
 }
 function tatCam() {
   if (henGio) clearInterval(henGio); henGio = null;
@@ -1362,7 +1365,7 @@ function docKhungNay(thamDo) {
     if (!r.loi) { sbdVua = r.sbd; lucVua = Date.now(); }
     $("loiCam").textContent = r.loi ? r.loi : daLuu ? "✅ Đã lưu SBD " + r.sbd + " — đưa phiếu tiếp theo" : "🟠 Có chỗ cần xem lại — sửa bên dưới rồi bấm Lưu";
     cho = Date.now() + (daLuu ? 1200 : 400);
-    dangXuLy = !r.loi && !daLuu; // chờ chị lưu/bỏ phiếu đang xem
+    dangXuLy = !r.loi && !daLuu; // chờ thầy cô lưu/bỏ phiếu đang xem
     if (dangXuLy) { var t = setInterval(function () { if (!dangDoc || dangDoc.cv !== c2) { dangXuLy = false; clearInterval(t); } }, 300); }
   }, 30);
 }
@@ -1550,7 +1553,7 @@ function khoiDong() {
     if (b.keys[ma]) { bao("Mã " + ma + " đã có"); return; }
     b.keys[ma] = khoaRong(); $("maMoi").value = ""; luu(); veDsMa();
   };
-  $("nutQuetDA").onclick = function () { cheDo = "dapan"; location.hash = "quet"; bao("Quét phiếu chị đã tô đáp án (nhớ tô mã đề)"); };
+  $("nutQuetDA").onclick = function () { cheDo = "dapan"; location.hash = "quet"; bao("Quét phiếu thầy cô đã tô đáp án (nhớ tô mã đề)"); };
   $("nutCam").onclick = batCam; $("nutTatCam").onclick = tatCam;
   $("nutDocKhung").onclick = function () { $("loiCam").textContent = "⏳ Đang đọc kĩ khung hình…"; sbdVua = ""; docKhungNay(false); };
   $("tuLuu").onchange = function () { S.tuLuu = $("tuLuu").checked; luu(); };
@@ -1562,7 +1565,7 @@ function khoiDong() {
   $("anhNhieu").onchange = function () {
     var ds = Array.prototype.slice.call(this.files); this.value = ""; if (!ds.length) return;
     if (cheDo === "dapan") ds = ds.slice(0, 1);
-    // đọc hết ảnh trước, rồi hiện LẦN LƯỢT từng phiếu: chị xem, sửa nếu cần, bấm Lưu → tự sang phiếu sau
+    // đọc hết ảnh trước, rồi hiện LẦN LƯỢT từng phiếu: thầy cô xem, sửa nếu cần, bấm Lưu → tự sang phiếu sau
     var b = bai(), moi = [];
     hangCho = []; dongDoc(true); phien = { tong: 0, luu: 0, bo: 0, loi: [] };
     var chay = function (i) {
@@ -1570,7 +1573,7 @@ function khoiDong() {
         moi.forEach(function (x, n) { x.so = n + 1; });
         hangCho = moi; phien.tong = moi.length;
         if (!moi.length) { bao("Không đọc được ảnh nào (" + phien.loi.slice(0, 3).join(", ") + ") — chụp lại thấy đủ 4 ô vuông góc", "do"); return; }
-        bao("Đã đọc " + ds.length + " ảnh → " + moi.length + " phiếu, chị xem và bấm Lưu từng phiếu" + (phien.loi.length ? " · không đọc được: " + phien.loi.slice(0, 3).join(", ") + (phien.loi.length > 3 ? "…" : "") : ""), phien.loi.length ? "do" : "");
+        bao("Đã đọc " + ds.length + " ảnh → " + moi.length + " phiếu, thầy cô xem và bấm Lưu từng phiếu" + (phien.loi.length ? " · không đọc được: " + phien.loi.slice(0, 3).join(", ") + (phien.loi.length > 3 ? "…" : "") : ""), phien.loi.length ? "do" : "");
         moTiepHangCho();
         return;
       }
@@ -1591,7 +1594,7 @@ function khoiDong() {
   $("nutLuu").onclick = function () { luuDangDoc(false); };
   $("nutLuuNhanh").onclick = function () {
     var n = hangCho.filter(function (x) { return x.ro; }).length;
-    hoi("Lưu luôn " + n + " phiếu máy đọc rõ còn lại (không cần xem)? Phiếu đang mở và các phiếu có ô cam vẫn chờ chị xem.", function () { luuNhanhConLai(); bao("⏩ Đã lưu " + n + " phiếu đọc rõ", "xanh"); hienDoc(); });
+    hoi("Lưu luôn " + n + " phiếu máy đọc rõ còn lại (không cần xem)? Phiếu đang mở và các phiếu có ô cam vẫn chờ thầy cô xem.", function () { luuNhanhConLai(); bao("⏩ Đã lưu " + n + " phiếu đọc rõ", "xanh"); hienDoc(); });
   };
   $("dSbd").oninput = function () { if (dangDoc) { dangDoc.r.sbd = this.value.trim(); dangDoc.r.sbdTho = null; } };
   $("dMade").oninput = function () { if (dangDoc) { dangDoc.r.made = this.value.trim(); dangDoc.r.madeTho = null; } };
