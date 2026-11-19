@@ -89,6 +89,7 @@ nav button.on i{transform:translateY(-2px);filter:drop-shadow(0 3px 4px rgba(37,
 .huy{width:34px;height:34px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:900;flex:none}
 .chip{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;background:var(--mat2);color:var(--chip)}
 .chip.dung{background:#dcfce7;color:#166534}.chip.sai{background:#ffe4e6;color:#9f1239}.chip.ngo{background:#fef3c7;color:#92400e}
+.chip.nutNgo{cursor:pointer;border:1px solid #f59e0b;user-select:none}.chip.nutNgo:hover{background:#fde68a}.chip.nutNgo:active{transform:scale(.97)}
 /* thẻ bài kiểm tra */
 .bk{display:flex;gap:14px;align-items:center;cursor:pointer;transition:transform .15s}
 .bk:hover{transform:translateY(-2px)}
@@ -1209,7 +1210,7 @@ function hienDoc() {
     $("dDiem").textContent = "–"; $("dDiemPhu").textContent = "Chưa có đáp án mã đề " + (r.made || "?");
     chip.push('<span class="chip sai">Chưa có đáp án mã ' + esc(r.made || "?") + " — vẫn lưu được, nhập đáp án sau máy tự chấm</span>");
   }
-  chip.push(r.ngo.length ? '<span class="chip ngo">🟠 ' + r.ngo.length + " chỗ cần xem lại</span>" : '<span class="chip dung">✔ Đọc rõ</span>');
+  chip.push(r.ngo.length ? '<span class="chip ngo nutNgo" id="nutXongNgo" title="Bấm khi thầy cô đã đối chiếu xong phiếu giấy">🟠 ' + r.ngo.length + ' chỗ cần xem lại — bấm vào đây nếu đã xem xong</span>' : '<span class="chip dung">✔ Đọc rõ</span>');
   var cho = dangDoc.cho;
   $("nutBo").textContent = cho ? (phien.xemLai ? "⏭️ Để sau, phiếu tiếp" : "⏭️ Bỏ qua phiếu này") : "↩️ Bỏ, quét lại";
   $("nutLuu").textContent = cho ? (hangCho.length ? "✅ Lưu điểm → phiếu sau" : "✅ Lưu điểm (phiếu cuối)") : "✅ Lưu điểm";
@@ -1222,9 +1223,14 @@ function hienDoc() {
       ' · đã lưu ' + phien.luu + (phien.bo ? " · bỏ qua " + phien.bo : "") + '<div class="thanh"><i style="width:' + Math.round((cho.so - 1) / phien.tong * 100) + '%"></i></div>';
   }
   if (cho && (!r.sbd || /\?/.test(r.sbd))) chip.push('<span class="chip sai">SBD chưa rõ — thầy cô gõ SBD rồi bấm Lưu</span>');
-  if (cho && phien.xemLai) chip.push('<span class="chip ngo">Phiếu đã lưu — không còn ảnh chụp, thầy cô đối chiếu phiếu giấy. Bấm Lưu = đã xem xong</span>');
+  if (cho && phien.xemLai) chip.push('<span class="chip ngo">Phiếu đã lưu — không còn ảnh chụp, thầy cô đối chiếu phiếu giấy. Sửa ô sai, hoặc bấm chip vàng ở trên để bỏ dấu, rồi bấm Lưu</span>');
   else if (b.kq[r.sbd] && cheDo === "hs") chip.push('<span class="chip ngo">SBD ' + esc(r.sbd) + " đã có — lưu sẽ thay bài cũ</span>");
   $("dChip").innerHTML = chip.join("");
+  var nXong = $("nutXongNgo");
+  if (nXong) nXong.onclick = function () {
+    dangDoc.r.ngo = []; hienDoc();
+    bao("✔ Đã bỏ dấu vàng — máy ghi nhận thầy cô đã xem lại phiếu này", "xanh");
+  };
   veAnhDoc(); $("banDoDoc").innerHTML = banDoSVG(r.mau, toTheoBaiLam(r, cheDo === "hs" ? b : null), 420);
   veChuGiai(cheDo === "hs" ? c : null, khoaCua(b, r.made));
   veSua();
@@ -1354,7 +1360,8 @@ function luuDangDoc(tuDong, loat) {
     cheDo = "hs"; dongDoc(); moMan("dapan"); return;
   }
   ["sbd", "made"].forEach(function (x) { var t = r.ngo.indexOf(x); if (t >= 0 && r[x] && !/\?/.test(r[x])) r.ngo.splice(t, 1); });
-  if (!tuDong && !loat) r.ngo = []; // thầy cô đã nhìn phiếu và bấm Lưu → coi như đã xem lại
+  // Dấu vàng "cần xem lại" được GIỮ cả sau khi lưu, theo yêu cầu của cô Thuý Vân 19/11/2026.
+  // Dấu chỉ mất khi: thầy cô sửa chính ô đó (boNgo), hoặc bấm vào chip vàng "đã xem xong".
   if (!r.sbd || /\?/.test(r.sbd)) { bao("Số báo danh chưa rõ — thầy cô gõ lại SBD rồi bấm Lưu", "do"); $("dSbd").focus(); am("sai"); return; }
   var luuR = { sbd: r.sbd, made: r.made, mau: r.mau, sbdTho: r.sbdTho || null, madeTho: r.madeTho || null, p3Tho: r.p3Tho || null, p1: r.p1, p2: r.p2, p3: r.p3, ngo: r.ngo.slice(), tl: r.tl, luc: Date.now() };
   if (dangDoc.cho) phien.luu++;
