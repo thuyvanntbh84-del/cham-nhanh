@@ -1,6 +1,6 @@
 /* CHẤM NHANH – service worker: cho phép mở app khi không có mạng.
    Đổi số PHIEN_BAN mỗi lần sửa app để điện thoại tải bản mới. */
-var PHIEN_BAN = "cham-nhanh-v1";
+var PHIEN_BAN = "cham-nhanh-v2";
 var CAN_LUU = [
   "./",
   "./index.html",
